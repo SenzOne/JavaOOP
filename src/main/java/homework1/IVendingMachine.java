@@ -2,8 +2,9 @@ package homework1;
 
 public interface IVendingMachine {
 
-    public Product getProductByName(String name);
+    public Product getProduct(String name);
 
-    public Product getProductByCost(int cost);
+    public Product getProduct(String name, double cost);
+
 }
 

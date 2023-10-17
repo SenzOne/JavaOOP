@@ -2,7 +2,7 @@ package homework1;
 
 public class BottleOfWater extends Product{
 
-    private double volume;
+    protected double volume;
 
     public BottleOfWater(String name, double cost, double volume) {
         super(name, cost);
