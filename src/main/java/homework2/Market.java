@@ -5,9 +5,11 @@ import java.util.List;
 
 public class Market implements MarketBehavior, QueueBehaviour {
     private final List<Actor> queue;
+    Product product;
 
-    public Market() {
+    public Market(Product product) {
         this.queue = new ArrayList<>();
+        this.product = product;
     }
 
     @Override
@@ -17,7 +19,7 @@ public class Market implements MarketBehavior, QueueBehaviour {
     }
 
     @Override
-    public void relaseFromMarket(List<Actor> actors) {
+    public void releaseFromMarket(List<Actor> actors) {
         for (Actor actor: actors){
             queue.remove(actor);
             System.out.println(actor.getName() + " вышел из магазина");
@@ -26,8 +28,8 @@ public class Market implements MarketBehavior, QueueBehaviour {
 
     @Override
     public void update() {
-        takeOrders();
-        giveOrders();
+        takeOrders(product);
+        giveOrders(product);
         releaseQueue();
     }
 
@@ -38,21 +40,26 @@ public class Market implements MarketBehavior, QueueBehaviour {
     }
 
     @Override
-    public void takeOrders() {
+    public void takeOrders(Product product) {
         for (Actor actor : queue) {
             if (!actor.isMakeOrder) {
                 actor.setMakeOrder(true);
-                System.out.println(actor.getName() + " сделал заказ");
+                System.out.println(actor.getName() + " сделал заказ " + product.getName());
             }
         }
     }
 
     @Override
-    public void giveOrders() {
+    public void giveOrders(Product product) {
         for (Actor actor : queue) {
             if (actor.isMakeOrder) {
+                if (product.count > 1){
+                    product.count -= 1;
+                    System.out.println(actor.getName() + " получил заказ " + product.getName());
+                } else {
+                    System.out.println("Товаров " + product.getName()+ " больше нет");
+                }
                 actor.setTakeOrder(true);
-                System.out.println(actor.getName() + " получил заказ");
             }
         }
     }
@@ -66,6 +73,6 @@ public class Market implements MarketBehavior, QueueBehaviour {
                 System.out.println(actor.getName() + " вышел из очереди");
             }
         }
-        relaseFromMarket(actorList);
+        releaseFromMarket(actorList);
     }
 }
