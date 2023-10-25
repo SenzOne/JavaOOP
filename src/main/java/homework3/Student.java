@@ -7,8 +7,10 @@ public class Student implements Comparable<Student> {
    private int studentId;
    private int srBall;
 
-    public Student(String firstName, int studentId, int srBall) {
+    public Student(String firstName, String secondName, String lastName, int studentId, int srBall) {
         this.firstName = firstName;
+        this.secondName = secondName;
+        this.lastName = lastName;
         this.studentId = studentId;
         this.srBall = srBall;
     }
@@ -60,6 +62,7 @@ public class Student implements Comparable<Student> {
                 ", secondName='" + secondName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", studentId=" + studentId +
+                ", srBall=" + srBall +
                 '}';
     }
 
