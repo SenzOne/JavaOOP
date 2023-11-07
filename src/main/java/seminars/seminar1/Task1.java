@@ -1,1 +1,0 @@
-package seminars.seminar1;public class Task1 {}
