@@ -3,7 +3,7 @@ package homworks.homework3;
 public abstract class Employee {
     private String surName;
     private String name;
-    private double salary;
+    protected double salary;
 
     public String getSurName() {
         return surName;
@@ -13,9 +13,6 @@ public abstract class Employee {
         return name;
     }
 
-    public double getSalary() {
-        return salary;
-    }
 
     public abstract double calculateSalary();
 

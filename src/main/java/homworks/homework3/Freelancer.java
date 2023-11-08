@@ -11,7 +11,7 @@ public class Freelancer extends Employee{
 
     @Override
     public double calculateSalary() {
-        return hours * days * super.getSalary();
+        return hours * days * salary;
     }
 
     @Override
