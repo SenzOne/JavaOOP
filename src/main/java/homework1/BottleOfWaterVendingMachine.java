@@ -54,4 +54,14 @@ public class BottleOfWaterVendingMachine implements IVendingMachine{
     public void addBottleOfWatter(BottleOfWater bottleOfWater){
         this.bottleOfWaterList.add(bottleOfWater);
     }
+
+    @Override
+    public Product getProduct(String name) {
+        return null;
+    }
+
+    @Override
+    public Product getProduct(String name, double cost) {
+        return null;
+    }
 }

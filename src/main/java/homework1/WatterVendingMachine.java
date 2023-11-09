@@ -9,6 +9,16 @@ public class WatterVendingMachine implements IVendingMachine{
         this.bottleOfWaterList = bottle;
     }
 
+    @Override
+    public Product getProductByName(String name) {
+        return null;
+    }
+
+    @Override
+    public Product getProductByCost(int cost) {
+        return null;
+    }
+
     public Product getProduct(String name) {
         for (Product p: bottleOfWaterList) {
             if (p.getName().equals(name)){

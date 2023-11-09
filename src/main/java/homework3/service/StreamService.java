@@ -1,5 +1,8 @@
 package homework3;
 
+import homework3.data.Stream;
+import homework3.data.StreamComparator;
+
 import java.util.List;
 
 public class StreamService {

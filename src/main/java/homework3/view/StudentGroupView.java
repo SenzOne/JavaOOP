@@ -1,4 +1,6 @@
-package homework3;
+package homework3.view;
+
+import homework3.data.Student;
 
 import java.util.List;
 

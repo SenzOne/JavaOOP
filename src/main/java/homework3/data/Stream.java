@@ -1,4 +1,6 @@
-package homework3;
+package homework3.data;
+
+import homework3.data.StudentGroup;
 
 import java.util.ArrayList;
 import java.util.Iterator;

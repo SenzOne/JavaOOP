@@ -1,5 +1,10 @@
 package homework3;
 
+import homework3.controller.StudentGroupController;
+import homework3.data.Stream;
+import homework3.data.Student;
+import homework3.data.StudentGroup;
+
 import java.util.ArrayList;
 import java.util.List;
 

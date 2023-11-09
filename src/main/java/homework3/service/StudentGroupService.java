@@ -1,5 +1,9 @@
 package homework3;
 
+import homework3.data.Student;
+import homework3.data.StudentGroup;
+import homework3.data.UserComparator;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -33,7 +37,7 @@ public class StudentGroupService {
 
     public List<Student> getSortedStudentGroupByFIO(){
         List<Student> studentList = new ArrayList<>(studentGroup.getStudentList());
-        studentList.sort(new StudentComparator());
+        studentList.sort(new UserComparator());
         return studentList;
     }
 }
