@@ -1,6 +1,6 @@
-package homework3.view;
+package homework3and4.view;
 
-import homework3.data.Student;
+import homework3and4.data.Student;
 
 import java.util.List;
 
@@ -10,4 +10,5 @@ public class StudentGroupView {
             System.out.println(st);
         }
     }
+
 }

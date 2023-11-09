@@ -1,8 +1,6 @@
-package homework3;
+package homework3and4;
 
-import homework3.data.Student;
-import homework3.data.StudentGroup;
-import homework3.data.UserComparator;
+import homework3and4.data.*;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -10,9 +8,16 @@ import java.util.List;
 
 public class StudentGroupService {
     private StudentGroup studentGroup;
+    private Teacher teacher;
 
-    public void createGroup(List<Student> studentList){
+    public StudentGroup createGroup(List<Student> studentList){
         studentGroup = new StudentGroup(studentList);
+        return studentGroup;
+    };
+
+    public StudentGroup createGroup(List<Student> studentList, Teacher teacher){
+        studentGroup = new StudentGroup(studentList);
+        return studentGroup;
     };
 
     public StudentGroup getStudentGroup() {
@@ -20,6 +25,15 @@ public class StudentGroupService {
     }
 
     public void printStudentGroup(){
+        System.out.println(studentGroup.getGroupId());
+        for (Student st: studentGroup){
+            System.out.println(st);
+        }
+    }
+
+    public void printStudentGroup(Teacher teacher){
+        System.out.println(teacher);
+        System.out.println(studentGroup.getGroupId());
         for (Student st: studentGroup){
             System.out.println(st);
         }
@@ -40,4 +54,12 @@ public class StudentGroupService {
         studentList.sort(new UserComparator());
         return studentList;
     }
+
+    public Student createStudent(String firstName, String secondName, String lastName){
+        if (studentGroup == null){
+            createGroup(new ArrayList<>());
+        }
+        return new Student(firstName, secondName, lastName, 0);
+    }
+
 }

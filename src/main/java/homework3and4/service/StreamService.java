@@ -1,7 +1,7 @@
-package homework3;
+package homework3and4;
 
-import homework3.data.Stream;
-import homework3.data.StreamComparator;
+import homework3and4.data.Stream;
+import homework3and4.data.StreamComparator;
 
 import java.util.List;
 

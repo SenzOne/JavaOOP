@@ -1,6 +1,4 @@
-package homework3.data;
-
-import homework3.data.User;
+package homework3and4.data;
 
 import java.util.Comparator;
 

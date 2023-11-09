@@ -1,6 +1,6 @@
-package homework3.view;
+package homework3and4.view;
 
-import homework3.data.User;
+import homework3and4.data.User;
 
 import java.util.List;
 
