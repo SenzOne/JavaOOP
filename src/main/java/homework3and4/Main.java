@@ -15,18 +15,29 @@ public class Main {
         StudentGroupController controller = new StudentGroupController();
         TeacherController teacherController = new TeacherController();
 
-        Student student1 = new Student("Аркадий", "Васильевич", "Бодрый", 6);
-        Student student2 = new Student("Иван","Михайлович", "Прохоров", 2);
-        Student student3 = new Student("Анна","Витальевна","Волож", 3);
-        Student student4 = controller.create("Аркадий", "Aндреевич", "Фрундзе");
+        // создаем группу
+        StudentGroup group1 =  controller.createStudentGroup();
 
+        // Добавляем в группу студентов
+        group1.addStudentsToGroup(List.of(
+                controller.create("Аркадий", "Aндреевич", "Фрундзе"),
+                controller.create("Петров", "Петр", "Петрович"),
+                controller.create("Аркадий", "Васильевич", "Бодрый"),
+                controller.create("Иван","Михайлович", "Прохоров"),
+                controller.create("Анна","Витальевна","Волож")
+        ));
+
+        // Добавляем в группу отдельного студента
+        Student student5 = controller.create("Петров", "Петр", "Петрович");
+        controller.addStudentToGroup(student5);
+
+
+        // Добавляем в группу учителей
         Teacher teacher1 =  teacherController.create("Иван", "Иванович", "Иванов");
-        Teacher teacher2 =  teacherController.create("Семен", "Генадьевич", "Рыбаков");
+        teacherController.create("Ярослав", "Генадьевич", "Рыбаков");
+        controller.print(group1, teacher1);
 
-
-
-        StudentGroup s1 =  controller.createStudentGroup(List.of(student1, student2, student3, student4), teacher1);
-        controller.print(s1, teacher1);
+        // вывод всех учителей
         teacherController.print();
         System.out.println("\nСортировка по среднему баллу: ");
         controller.print(controller.sortedStudentGroupBySrBall());
@@ -34,11 +45,12 @@ public class Main {
         System.out.println("\nСортировка по ФИО: ");
         controller.print(controller.sortedStudentGroupByFIO());
 
-        StudentGroup g1 = new StudentGroup(new ArrayList<>());
-        StudentGroup g2 = new StudentGroup(new ArrayList<>());
+        StudentGroup g2 = controller.createStudentGroup();
+        StudentGroup g3 = controller.createStudentGroup();
         Stream stream = new Stream();
-        stream.addStudentGroup(g1);
+        stream.addStudentGroup(group1);
         stream.addStudentGroup(g2);
+        stream.addStudentGroup(g3);
 
         Stream stream1 = new Stream();
         Stream stream2 = new Stream();

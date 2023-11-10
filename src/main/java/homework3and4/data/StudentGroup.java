@@ -1,5 +1,6 @@
 package homework3and4.data;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
@@ -10,6 +11,10 @@ public class StudentGroup implements Iterable<Student>{
 
     {
         groupId += 100;
+    }
+
+    public StudentGroup() {
+        this.studentList = new ArrayList<>();
     }
 
     public StudentGroup(List<Student> studentList) {
@@ -25,8 +30,12 @@ public class StudentGroup implements Iterable<Student>{
         return studentList;
     }
 
-    public void addGroup(Student student){
+    public void addStudentToGroup(Student student){
         studentList.add(student);
+    }
+
+    public void addStudentsToGroup(List<Student> students){
+        studentList.addAll(students);
     }
 
     @Override

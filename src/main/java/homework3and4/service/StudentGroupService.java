@@ -5,35 +5,41 @@ import homework3and4.data.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Random;
 
 public class StudentGroupService {
     private StudentGroup studentGroup;
-    private Teacher teacher;
+
+
+    public StudentGroup createGroup(){
+        studentGroup = new StudentGroup();
+        return studentGroup;
+    }
 
     public StudentGroup createGroup(List<Student> studentList){
         studentGroup = new StudentGroup(studentList);
         return studentGroup;
-    };
+    }
 
     public StudentGroup createGroup(List<Student> studentList, Teacher teacher){
         studentGroup = new StudentGroup(studentList);
         return studentGroup;
-    };
+    }
+
 
     public StudentGroup getStudentGroup() {
         return studentGroup;
     }
 
-    public void printStudentGroup(){
-        System.out.println(studentGroup.getGroupId());
-        for (Student st: studentGroup){
-            System.out.println(st);
-        }
+    public StudentGroup addStudentToGroup(Student student){
+        studentGroup.addStudentToGroup(student);
+        return getStudentGroup();
     }
+
 
     public void printStudentGroup(Teacher teacher){
         System.out.println(teacher);
-        System.out.println(studentGroup.getGroupId());
+        System.out.println("Номер группы: " + studentGroup.getGroupId());
         for (Student st: studentGroup){
             System.out.println(st);
         }
@@ -56,10 +62,10 @@ public class StudentGroupService {
     }
 
     public Student createStudent(String firstName, String secondName, String lastName){
+        Random random = new Random();
         if (studentGroup == null){
             createGroup(new ArrayList<>());
         }
-        return new Student(firstName, secondName, lastName, 0);
+        return new Student(firstName, secondName, lastName, random.nextInt(1, 5));
     }
-
 }
