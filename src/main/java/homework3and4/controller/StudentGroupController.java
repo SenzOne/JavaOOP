@@ -23,11 +23,6 @@ public class StudentGroupController implements UserController<Student> {
     }
 
 
-
-//    public void print(){
-//        studentGroupView.printStudentGroup(studentGroupService.getListStudent());
-//    }
-
     public void print(StudentGroup studentGroup){
         studentGroupService.printStudentGroup();
     }

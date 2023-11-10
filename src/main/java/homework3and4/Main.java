@@ -27,7 +27,6 @@ public class Main {
 
         StudentGroup s1 =  controller.createStudentGroup(List.of(student1, student2, student3, student4), teacher1);
         controller.print(s1, teacher1);
-        controller.print(s1);
         teacherController.print();
         System.out.println("\nСортировка по среднему баллу: ");
         controller.print(controller.sortedStudentGroupBySrBall());
