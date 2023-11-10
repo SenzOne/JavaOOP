@@ -1,8 +1,9 @@
 package homework3and4.data;
 
-public class Teacher extends User{
+public class Teacher extends User {
 
     private int groupId;
+
     public Teacher(String firstName, String secondName, String lastName, int groupId) {
         super(firstName, secondName, lastName);
         this.groupId = groupId;

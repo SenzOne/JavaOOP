@@ -4,8 +4,6 @@ import homework3and4.data.Teacher;
 import homework3and4.service.TeacherService;
 import homework3and4.view.UserView;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class TeacherController implements UserController<Teacher>{
     UserView<Teacher> teacherUserView = new UserView<>();
@@ -18,5 +16,9 @@ public class TeacherController implements UserController<Teacher>{
     public void print(){
         System.out.println("\nСписок учителей: ");
         teacherUserView.sendOnConsole(teacherService.getTeacherList());
+    }
+
+    public void setTeacherName(Teacher teacher, String firstName, String secondName){
+        teacherService.setTeacher(teacher, firstName, secondName);
     }
 }

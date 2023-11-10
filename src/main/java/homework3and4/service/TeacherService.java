@@ -17,4 +17,18 @@ public class TeacherService {
     public List<Teacher> getTeacherList() {
         return teacherList;
     }
+
+    public void delTeacher(Teacher teacher){
+        for (int i = 0; i < teacherList.size(); i++) {
+            if(teacherList.get(i).equals(teacher)){
+                teacherList.remove(teacher);
+            }
+        }
+    }
+
+    public Teacher setTeacher(Teacher teacher, String firstName, String secondName){
+        teacher.setFirstName(firstName);
+        teacher.setSecondName(secondName);
+        return teacher;
+    }
 }

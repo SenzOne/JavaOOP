@@ -31,10 +31,16 @@ public class Main {
         Student student5 = controller.create("Петров", "Петр", "Петрович");
         controller.addStudentToGroup(student5);
 
-
         // Добавляем в группу учителей
-        Teacher teacher1 =  teacherController.create("Иван", "Иванович", "Иванов");
+        Teacher teacher1 =  teacherController.create("Ипван", "Ипванович", "Иванов");
         teacherController.create("Ярослав", "Генадьевич", "Рыбаков");
+        teacherController.print();
+
+        // Изменение ошибки в имени учителя
+        teacherController.setTeacherName(teacher1, "Иван", "Иванович");
+        teacherController.print();
+
+        System.out.println();
         controller.print(group1, teacher1);
 
         // вывод всех учителей
