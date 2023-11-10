@@ -24,7 +24,7 @@ public class Main {
                 controller.create("Петров", "Петр", "Петрович"),
                 controller.create("Аркадий", "Васильевич", "Бодрый"),
                 controller.create("Иван","Михайлович", "Прохоров"),
-                controller.create("Анна","Витальевна","Волож")
+                controller.create("Анна","Витальевна","Цветкова")
         ));
 
         // Добавляем в группу отдельного студента
