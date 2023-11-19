@@ -1,9 +1,8 @@
 package homework5.controller;
 
-import homework3and4.data.StudentGroup;
 import homework5.model.*;
 import homework5.service.DataService;
-import homework5.service.StudentGroupService;
+import homework5.service.StudyGroupService;
 import homework5.view.GroupView;
 import homework5.view.StudentView;
 
@@ -12,7 +11,7 @@ import java.util.List;
 
 public class Controller {
     private final DataService service = new DataService();
-    private final StudentGroupService studentGroupService = new StudentGroupService();
+    private final StudyGroupService studyGroupService = new StudyGroupService();
     private final StudentView view = new StudentView();
     private final GroupView groupView = new GroupView();
 
@@ -31,6 +30,15 @@ public class Controller {
         }
     }
 
+    public List<Student> getStudents(List<Integer> index){
+        List<User> userList = service.getUserList();
+        List<Student> resStudent = new ArrayList<>();
+        for (int i: index){
+            resStudent.add((Student) userList.get(i));
+        }
+        return resStudent;
+    }
+
     public List<Student> getAllStudents(){
         List<User> userList = service.getUserList();
         List<Student> resStudent = new ArrayList<>();
@@ -43,11 +51,11 @@ public class Controller {
     }
 
     public void createGroup(Teacher teacher, List<Student> students){
-        studentGroupService.create(teacher, students);
+        studyGroupService.create(teacher, students);
     }
 
     public void printGroup(int index){
-        StudyGroup group = studentGroupService.getGroup(index);
+        StudyGroup group = studyGroupService.getGroup(index);
         groupView.printOnConsole(group);
     }
 }

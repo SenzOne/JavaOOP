@@ -16,4 +16,9 @@ public class Student extends User{
     public int getStudentId() {
         return studentId;
     }
+
+    @Override
+    public String toString() {
+        return String.format("%s %s", super.getName(), super.getSurname());
+    }
 }

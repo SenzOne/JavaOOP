@@ -16,4 +16,9 @@ public class Teacher extends User {
     public int getTeacherId() {
         return teacherId;
     }
+
+    @Override
+    public String toString() {
+        return String.format("%s %s", super.getName(), super.getSurname());
+    }
 }

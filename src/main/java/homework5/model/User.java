@@ -16,6 +16,14 @@ public abstract class User {
         this.surname = surname;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
     public static int getId() {
         return id;
     }
