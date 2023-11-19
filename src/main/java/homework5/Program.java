@@ -9,10 +9,12 @@ public class Program {
 
     public static void main(String[] args) {
         Controller controller = new Controller();
-        controller.createStudent("1", "2");
+        controller.createStudent("1", "1");
+        controller.createStudent("2", "2");
 
-//        System.out.println(t3.getTeacherId());
-//        System.out.println(s1.getStudentId());
-//        System.out.println(User.getId());
+        controller.createTeacher("Teacher1", "Teacher1");
+
+        controller.createGroup(new Teacher("t1", "2"), controller.getAllStudents());
+        controller.printGroup(0);
     }
 }

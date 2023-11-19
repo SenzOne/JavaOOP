@@ -1,9 +1,6 @@
 package homework5.service;
 
-import homework5.model.Student;
-import homework5.model.Teacher;
-import homework5.model.Type;
-import homework5.model.User;
+import homework5.model.*;
 
 import java.util.ArrayList;
 import java.util.List;
