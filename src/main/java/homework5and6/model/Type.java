@@ -1,4 +1,4 @@
-package homework5.model;
+package homework5and6.model;
 
 public enum Type {
     STUDENT,

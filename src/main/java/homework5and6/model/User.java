@@ -1,4 +1,4 @@
-package homework5.model;
+package homework5and6.model;
 
 public abstract class User {
     private static int id;

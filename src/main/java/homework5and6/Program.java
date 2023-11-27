@@ -1,11 +1,11 @@
-package homework5;
+package homework5and6;
 
-import homework5.controller.Controller;
-import homework5.model.Teacher;
-import homework5.service.DataService;
-import homework5.service.StudyGroupService;
-import homework5.view.GroupView;
-import homework5.view.StudentView;
+import homework5and6.controller.Controller;
+import homework5and6.model.Teacher;
+import homework5and6.service.DataService;
+import homework5and6.service.StudyGroupService;
+import homework5and6.view.GroupView;
+import homework5and6.view.StudentView;
 
 import java.util.List;
 

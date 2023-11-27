@@ -1,4 +1,4 @@
-package homework5.model;
+package homework5and6.model;
 
 import java.util.List;
 

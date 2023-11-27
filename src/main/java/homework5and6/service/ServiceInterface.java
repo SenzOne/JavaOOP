@@ -1,4 +1,4 @@
-package homework5.service;
+package homework5and6.service;
 
 public interface ServiceInterface {
 }

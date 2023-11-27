@@ -1,6 +1,6 @@
-package homework5.view;
+package homework5and6.view;
 
-import homework5.model.Student;
+import homework5and6.model.Student;
 
 /**
  * Interface Segregation (Принцип разделения интерфейсов)

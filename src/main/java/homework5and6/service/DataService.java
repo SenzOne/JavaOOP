@@ -1,6 +1,6 @@
-package homework5.service;
+package homework5and6.service;
 
-import homework5.model.*;
+import homework5and6.model.*;
 
 import java.util.ArrayList;
 import java.util.List;

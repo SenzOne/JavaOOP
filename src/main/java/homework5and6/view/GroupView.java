@@ -1,8 +1,7 @@
-package homework5.view;
+package homework5and6.view;
 
-import homework3and4.data.StudentGroup;
-import homework5.model.Student;
-import homework5.model.StudyGroup;
+import homework5and6.model.Student;
+import homework5and6.model.StudyGroup;
 
 import java.util.List;
 

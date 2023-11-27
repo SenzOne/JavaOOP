@@ -1,7 +1,7 @@
-package homework5.service;
+package homework5and6.service;
 
-import homework5.model.Type;
-import homework5.model.User;
+import homework5and6.model.Type;
+import homework5and6.model.User;
 
 import java.util.List;
 
