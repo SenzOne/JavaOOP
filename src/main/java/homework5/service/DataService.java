@@ -5,7 +5,7 @@ import homework5.model.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DataService implements DataServiceInterface{
+public class DataService {
     private List<User> userList = new ArrayList<>();
 
 
