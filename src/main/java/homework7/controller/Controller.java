@@ -1,9 +1,8 @@
 package homework7.controller;
 
-import homework7.model.CalculationModel;
+
 import homework7.model.Computable;
 import homework7.model.GettingData;
-import homework7.model.Logger;
 import homework7.view.View;
 
 public class Controller {
@@ -11,7 +10,6 @@ public class Controller {
     private double lastNum;
     private char operator;
     View view;
-    Logger logger = new Logger();
 
     Computable computable;
 
@@ -27,26 +25,27 @@ public class Controller {
             this.firstNum = gettingData.getDoubleFirstInput();
             this.lastNum = gettingData.getDoubleLastInput();
             this.operator = gettingData.getOperator();
+        } else {
+           getData();
         }
     }
 
     public void calculate() {
         switch (operator) {
             case '+':
-
-                System.out.println(computable.summation(firstNum, lastNum));
+                view.cleanPrint(computable.summation(firstNum, lastNum));
                 break;
 
             case '-':
-                System.out.println(computable.subtraction(firstNum, lastNum));
+                view.cleanPrint(computable.subtraction(firstNum, lastNum));
                 break;
 
             case '*':
-                System.out.println(computable.multiplication(firstNum, lastNum));
+                view.cleanPrint(computable.multiplication(firstNum, lastNum));
                 break;
 
             case '/':
-                System.out.println(computable.division(firstNum, lastNum));
+                view.cleanPrint(computable.division(firstNum, lastNum));
                 break;
         }
     }
