@@ -1,6 +1,7 @@
 package homework7.controller;
 
 import homework7.model.CalculationModel;
+import homework7.model.Computable;
 import homework7.model.GettingData;
 import homework7.model.Logger;
 import homework7.view.View;
@@ -12,11 +13,11 @@ public class Controller {
     View view;
     Logger logger = new Logger();
 
-    CalculationModel calculationModel;
+    Computable computable;
 
 
-    public Controller(CalculationModel calculationModel, View view) {
-        this.calculationModel = calculationModel;
+    public Controller(Computable computable, View view) {
+        this.computable = computable;
         this.view = view;
     }
 
@@ -32,20 +33,20 @@ public class Controller {
     public void calculate() {
         switch (operator) {
             case '+':
-                logger.logging("Сумма");
-                System.out.println(calculationModel.summation(firstNum, lastNum));
+
+                System.out.println(computable.summation(firstNum, lastNum));
                 break;
 
             case '-':
-                System.out.println(calculationModel.subtraction(firstNum, lastNum));
+                System.out.println(computable.subtraction(firstNum, lastNum));
                 break;
 
             case '*':
-                System.out.println(calculationModel.multiplication(firstNum, lastNum));
+                System.out.println(computable.multiplication(firstNum, lastNum));
                 break;
 
             case '/':
-                System.out.println(calculationModel.division(firstNum, lastNum));
+                System.out.println(computable.division(firstNum, lastNum));
                 break;
         }
     }

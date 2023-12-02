@@ -2,8 +2,8 @@ package homework7.model;
 
 public class CalculationModel implements Computable {
     @Override
-    public double summation(double a, double b) {
-        return a + b;
+    public String summation(double a, double b) {
+        return String.format("%s + %s = %s", a, b, a + b);
     }
 
     @Override
