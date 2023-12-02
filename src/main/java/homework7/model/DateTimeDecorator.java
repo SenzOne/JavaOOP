@@ -3,11 +3,19 @@ package homework7.model;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+/**
+ * Класс DateTimeDecorator является декоратором, добавляющим дату и время к результатам вычислений.
+ */
 public class DateTimeDecorator extends CalculationModelDecorator{
     LocalDateTime currentDateTime = LocalDateTime.now();
     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM HH:mm:ss");
     String formattedDateTime = currentDateTime.format(formatter);
 
+    /**
+     * Конструктор класса DateTimeDecorator.
+     *
+     * @param computable Объект, реализующий интерфейс Computable, к которому добавляется функциональность декоратора.
+     */
     public DateTimeDecorator(Computable computable) {
         super(computable);
     }
