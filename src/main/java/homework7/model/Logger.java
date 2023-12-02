@@ -5,14 +5,15 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class Logger {
-    String filename = "logger.txt";
+
+    String filePath = "src/main/java/homework7/logger.txt";
 
     BufferedWriter bufferedWriter;
 
     public void logging(String data){
         {
             try {
-                bufferedWriter = new BufferedWriter(new FileWriter(filename, true));
+                bufferedWriter = new BufferedWriter(new FileWriter(filePath, true));
                 bufferedWriter.newLine();
                 bufferedWriter.write(data);
                 bufferedWriter.close();
