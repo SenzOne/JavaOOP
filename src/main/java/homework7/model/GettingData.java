@@ -1,7 +1,7 @@
 package homework7.model;
 
 public class GettingData {
-    private String inputData;
+    private final String inputData;
 
     public GettingData(String inputData) {
         this.inputData = inputData;

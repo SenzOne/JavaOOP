@@ -5,6 +5,7 @@ import homework7.model.CalculationModel;
 import homework7.view.View;
 
 // TODO: логи на вызов функций + время;
+// TODO: логи ввиде паттерна декоратор
 public class Program {
 
     public static void main(String[] args) {
