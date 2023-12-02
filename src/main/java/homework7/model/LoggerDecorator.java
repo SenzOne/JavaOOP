@@ -15,17 +15,24 @@ public class LoggerDecorator extends CalculationModelDecorator {
     }
 
     @Override
-    public double subtraction(double a, double b) {
-        return 0;
+    public String subtraction(double a, double b) {
+        String res = computable.subtraction(a, b);
+        logger.logging(res);
+        return res;
     }
 
     @Override
-    public double division(double a, double b) {
-        return 0;
+    public String division(double a, double b) {
+        String res = computable.division(a, b);
+        logger.logging(res);
+        return res;
+
     }
 
     @Override
-    public double multiplication(double a, double b) {
-        return 0;
+    public String multiplication(double a, double b) {
+        String res = computable.multiplication(a, b);
+        logger.logging(res);
+        return res;
     }
 }

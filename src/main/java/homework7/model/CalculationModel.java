@@ -7,17 +7,21 @@ public class CalculationModel implements Computable {
     }
 
     @Override
-    public double subtraction(double a, double b) {
-        return a - b;
+    public String subtraction(double a, double b) {
+        return String.format("%s + %s = %s", a, b, a - b);
     }
 
     @Override
-    public double division(double a, double b) {
-        return a / b;
+    public String division(double a, double b) {
+        if (b == 0) {
+            return "Ошибка деления на ноль";
+        } else {
+            return String.format("%s + %s = %s", a, b,  a / b);
+        }
     }
 
     @Override
-    public double multiplication(double a, double b) {
-        return a * b;
+    public String multiplication(double a, double b) {
+        return String.format("%s + %s = %s", a, b, a * b);
     }
 }

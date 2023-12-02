@@ -12,7 +12,8 @@ public class Logger {
     public void logging(String data){
         {
             try {
-                bufferedWriter = new BufferedWriter(new FileWriter(filename));
+                bufferedWriter = new BufferedWriter(new FileWriter(filename, true));
+                bufferedWriter.newLine();
                 bufferedWriter.write(data);
                 bufferedWriter.close();
 
