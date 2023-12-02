@@ -10,6 +10,12 @@ public class Logger {
 
     BufferedWriter bufferedWriter;
 
+    /**
+     * Метод logging осуществляет запись данных в лог-файл.
+     *
+     * @param data Данные, которые требуется записать в файл лога.
+     */
+
     public void logging(String data){
         {
             try {

@@ -5,6 +5,9 @@ import homework7.model.Computable;
 import homework7.model.GettingData;
 import homework7.view.View;
 
+/**
+ * Класс Controller отвечает за управление вычислениями и представлением.
+ */
 public class Controller {
     private double firstNum;
     private double lastNum;
@@ -13,12 +16,20 @@ public class Controller {
 
     Computable computable;
 
-
+    /**
+     * Конструктор класса Controller.
+     *
+     * @param computable Объект, реализующий интерфейс Computable для выполнения вычислений.
+     * @param view       Объект класса View для отображения информации.
+     */
     public Controller(Computable computable, View view) {
         this.computable = computable;
         this.view = view;
     }
 
+    /**
+     * Метод для получения данных от пользователя.
+     */
     public void getData() {
         GettingData gettingData = new GettingData(view.prompt());
         if (gettingData.checkData()) {
@@ -30,6 +41,10 @@ public class Controller {
         }
     }
 
+
+    /**
+     * Метод для выполнения вычислений на основе полученных данных.
+     */
     public void calculate() {
         switch (operator) {
             case '+':

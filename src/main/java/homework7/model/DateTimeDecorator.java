@@ -5,7 +5,6 @@ import java.time.format.DateTimeFormatter;
 
 public class DateTimeDecorator extends CalculationModelDecorator{
     LocalDateTime currentDateTime = LocalDateTime.now();
-
     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM HH:mm:ss");
     String formattedDateTime = currentDateTime.format(formatter);
 

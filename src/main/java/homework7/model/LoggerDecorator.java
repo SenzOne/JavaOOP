@@ -1,8 +1,16 @@
 package homework7.model;
 
+/**
+ * Класс LoggerDecorator расширяет функциональность вычислений с помощью декоратора и реализует логирование результатов.
+ */
 public class LoggerDecorator extends CalculationModelDecorator {
     Logger logger = new Logger();
 
+    /**
+     * Конструктор класса LoggerDecorator.
+     *
+     * @param computable Объект, реализующий интерфейс Computable, к которому добавляется логирование.
+     */
     public LoggerDecorator(Computable computable) {
         super(computable);
     }
