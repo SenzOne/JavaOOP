@@ -7,7 +7,7 @@ public class Worker extends Employee{
 
     @Override
     public double calculateSalary() {
-        return getSalary();
+        return salary;
     }
 
     @Override
